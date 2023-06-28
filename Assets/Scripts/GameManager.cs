@@ -1786,7 +1786,7 @@ public class GameManager : MonoBehaviour
         yield return createNewMessageFromMe("Preciso de um tempo para processar isso tudo");
         yield return createNewMessageFromYou("Se precisar de apoio estou aqui filho");
         yield return createNewMessageFromMe("Te amo, mãe");
-        yield return createNewMessageFromYou("Também te amo filho", false, 1.0f, 15.0f);
+        yield return createNewMessageFromYou("Também te amo filho", false, 1.0f, 10.0f);
         
         novoDia = "Qua 09:16";
         animationEnabled = true;

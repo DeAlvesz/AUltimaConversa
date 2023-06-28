@@ -15,4 +15,9 @@ public class Noticia : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+
+    public void IrCreditos()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
 }
