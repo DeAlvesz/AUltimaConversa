@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
     public Image notificacaoDia6;
     public Image notificacaoDia7;
     public Button botaoTransicao;
+    public TMP_Text textoBotaoTransicao;
     public Button botaoTransicao2;
     public TMP_Text textoBotaoTransicao2;
 
@@ -93,7 +94,7 @@ public class GameManager : MonoBehaviour
         novoDia = "Qua 22:40";
         dia.text = novoDia;
         
-        StartCoroutine(chat106());
+        StartCoroutine(chat87());
     }
 
     void Update()
@@ -111,7 +112,7 @@ public class GameManager : MonoBehaviour
         // o posdelay ta configurado pra ser executado antes de deletar
 
         //   ------------------>>>>>>   EXEMPLO DE USO DOS DELAYS   deletar?  predelay   posdelay
-        yield return createNewMessageFromYou("Oiee, tudo bem?",   false,    2f,       1.4f);
+        yield return createNewMessageFromYou("Oiee, tudo bem?",   false,    2f,       1.8f);
         yield return createNewMessageFromYou("Vi a foto que você postou");
         yield return createNewMessageFromYou("Voltou pra cidade?");
         yield return createNewMessageFromMe("Oii, tudo bem e você?");
@@ -128,7 +129,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat2");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Sim, voltei pra ver a família nas férias", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Sim, voltei pra ver a família nas férias", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Ah, que bom!");
         yield return createNewMessageFromYou("Faz tempo que a gente não conversa, né?");
 
@@ -144,7 +145,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat3");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Cheguei ontem!", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Cheguei ontem!", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Ah, que bom!");
         yield return createNewMessageFromYou("Faz tempo que a gente não conversa, né?");
 
@@ -160,7 +161,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat4");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Simm, to visitando minha cidadezinha", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Simm, to visitando minha cidadezinha", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Ah, que bom!");
         yield return createNewMessageFromYou("Faz tempo q a gente não conversa, né?");
 
@@ -176,7 +177,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat5");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Faz desde que eu me mudei, na verdade", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Faz, desde que eu me mudei, na verdade", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Esses dias encontrei umas fotos nossa criança na casa da minha vó");
         yield return createNewMessageFromYou("A gente tava andando de bicicleta");
         yield return createNewMessageFromYou("Saudades demais da nossa infância");
@@ -193,7 +194,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat6");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Nem parece que faz três anos, né", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Nem parece que faz três anos, né", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Esses dias encontrei umas fotos nossa criança na casa da minha vó");
         yield return createNewMessageFromYou("A gente tava andando de bicicleta");
         yield return createNewMessageFromYou("Saudades demais da nossa infância");
@@ -210,7 +211,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat7");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Nossa, sim. Saudade da nossa amizade", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Nossa, sim. Saudade da nossa amizade", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Esses dias encontrei umas fotos nossa criança na casa da minha vó");
         yield return createNewMessageFromYou("A gente tava andando de bicicleta");
         yield return createNewMessageFromYou("Saudades demais da nossa infância");
@@ -227,9 +228,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat8");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Caraca o tempo voa", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Caraca o tempo voa", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Lembra da vez que tu caiu da bike e quebrou o braço?");
-        yield return createNewMessageFromYou("Lembro que simkkkkkkk");
+        yield return createNewMessageFromYou("Lembro simkkkkkkk");
         yield return createNewMessageFromYou("Fiquei um mês com aquele gesso");
 
         setButtonOptionsAndShow(
@@ -244,9 +245,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat9");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Essa época era boa, a gente se divertia um monte", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Essa época era boa, a gente se divertia um monte", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Lembra da vez que tu caiu da bike e quebrou o braço?");
-        yield return createNewMessageFromYou("Lembro que simkkkkkkk");
+        yield return createNewMessageFromYou("Lembro simkkkkkkk");
         yield return createNewMessageFromYou("Fiquei um mês com aquele gesso");
 
        setButtonOptionsAndShow(
@@ -261,9 +262,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat10");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("O quanto eu ja me ralei andando de bicicleta...", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("O quanto eu ja me ralei andando de bicicleta...", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Lembra da vez que tu caiu da bike e quebrou o braço?");
-        yield return createNewMessageFromYou("Lembro que simkkkkkkk");
+        yield return createNewMessageFromYou("Lembro simkkkkkkk");
         yield return createNewMessageFromYou("Fiquei um mês com aquele gesso");
 
         setButtonOptionsAndShow(
@@ -278,7 +279,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat14");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Mas eai ta fazendo facul?", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Mas eai ta fazendo facul?", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Simm, estou");
         yield return createNewMessageFromYou("To cursando veterinária");
         yield return createNewMessageFromYou("Já estou no segundo semestre");
@@ -296,7 +297,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat15");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("E vc ta trabalhando no shopping ainda?", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("E vc ta trabalhando no shopping ainda?", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Pior que não");
         yield return createNewMessageFromYou("Saí de lá faz uns 6 meses");
         yield return createNewMessageFromYou("No momento estou desempregada");
@@ -313,7 +314,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat16");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("E a tia Rose? como ela esta?", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("E a tia Rose? como ela esta?", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Ela ta bemm");
         yield return createNewMessageFromYou("Ta com saudades de tomar um tererê contigo🥺");
         yield return createNewMessageFromMe("Nossa vdd, saudades de uma tarde com um têres com vcs");
@@ -349,7 +350,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat17");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("E ta curtindo?", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("E ta curtindo?", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("To sim");
         yield return createNewMessageFromYou("1 semestre não foi muito interessante");
         yield return createNewMessageFromYou("Mas agora ta tendo bastante matérias legais");
@@ -382,9 +383,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat18");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Ta cuidandando dos bicho entaokkkkkk", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Ta cuidandando dos bicho entaokkkkkk", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Kkkkkkkk to sim");
-        yield return createNewMessageFromYou("E vc, como ta no curso?)");
+        yield return createNewMessageFromYou("E vc, como ta no curso?");
         yield return createNewMessageFromMe("Ta show, to curtindo muito");
         yield return createNewMessageFromMe("Tem umas matéria meio paia, mas o resto ta bacana");
         yield return createNewMessageFromYou("Que chique");
@@ -415,7 +416,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat19");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Poxa, lembro que vc gostava de lá", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Poxa, lembro que vc gostava de lá", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Simm, gostava bastante!");
         yield return createNewMessageFromYou("Saí por causa de umas brigas em casa");
         yield return createNewMessageFromYou("Mas nada demais");
@@ -436,7 +437,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat20");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Certeza que vc vai achar algo melhor", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Certeza que vc vai achar algo melhor", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Tomara que sim🙏");
         yield return createNewMessageFromYou("Saí por causa de umas brigas em casa");
         yield return createNewMessageFromYou("Mas nada demais");
@@ -457,7 +458,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat23");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Simmm, to aprendendo bastante", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Simmm, to aprendendo bastante", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Mas não é muito fácil");
         yield return createNewMessageFromYou("Pior que eu entendo");
         yield return createNewMessageFromYou("Mas eii, você ta livre sexta a tarde?");
@@ -484,7 +485,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat24");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Mais ou menos, estagiário é muito desvalorizado😭", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Mais ou menos, estagiário é muito desvalorizado😭", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Pior que eu entendo");
         yield return createNewMessageFromYou("Mas eii, você ta livre sexta a tarde?");
         yield return createNewMessageFromYou("Pensei em tomarmos o sorvete la do Edilson que a gente tomava nos tempos de escola");
@@ -509,7 +510,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat30");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Fechou então", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Fechou então", false, 0.000000001f,   1.8f);
 
         setButtonOptionsAndShow(
        "Nos vemos na sexta", () => StartCoroutine(chat33()),
@@ -523,7 +524,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat31");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Bele", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Bele", false, 0.000000001f,   1.8f);
 
         setButtonOptionsAndShow(
        "Nos vemos na sexta", () => StartCoroutine(chat33()),
@@ -537,7 +538,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat32");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Vamos sim, boa noite", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Vamos sim, boa noite", false, 0.000000001f,   1.8f);
 
         setButtonOptionsAndShow(
        "Nos vemos na sexta", () => StartCoroutine(chat33()),
@@ -597,7 +598,7 @@ public class GameManager : MonoBehaviour
         messagePreDelay = 0.000000001f;
         yield return createNewMessageFromYou("Oiee");
         yield return createNewMessageFromYou("As 3 então?");
-        messagePreDelay = 1.4f;
+        messagePreDelay = 1.8f;
         yield return createNewMessageFromMe("Eaii");
         yield return createNewMessageFromMe("Sim ja to com roupa de ir");
         yield return createNewMessageFromYou("Lembra onde é ne?");
@@ -614,7 +615,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat40");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Lembro simm", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Lembro simm", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Acho bom!!");
 
         setButtonOptionsAndShow(
@@ -629,7 +630,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat41");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Simm la perto da nossa antiga escola né", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Simm la perto da nossa antiga escola né", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Issooo, 2 quadras ali pra baixo");
 
         setButtonOptionsAndShow(
@@ -644,7 +645,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat42");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Não tenho certeza", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Não tenho certeza", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("seu esquecido");
         yield return createNewMessageFromYou("É 2 quadras pra baixo da nossa antiga escola");
 
@@ -660,7 +661,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat43");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Nunca me esqueceria daquele lugar😠", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Nunca me esqueceria daquele lugar😠", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Beleza, se vemos lá");
         yield return createNewMessageFromMe("Beleee");
         yield return createNewMessageFromMe("Até depois");
@@ -677,7 +678,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat44");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Certo certo, então eu lembro", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Certo certo, então eu lembro", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Beleza, se vemos lá");
         yield return createNewMessageFromMe("Beleee");
         yield return createNewMessageFromMe("Até depois");
@@ -694,7 +695,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat45");
         ButtonPanel.SetActive(false);
         
-        yield return createNewMessageFromMe("Aé vdd, lembrei agora", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Aé vdd, lembrei agora", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Beleza, se vemos lá");
         yield return createNewMessageFromMe("Beleee");
         yield return createNewMessageFromMe("Até depois");
@@ -728,7 +729,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat46");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Bom demais matar a saudade", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Bom demais matar a saudade", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Temos que sair de novo");
         yield return createNewMessageFromYou("Simmm temos mesmo");
         yield return createNewMessageFromYou("Aproveitar suas férias");
@@ -749,7 +750,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat47");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Foi demais hj, me diverti muito", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Foi demais hj, me diverti muito", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Temos que sair de novo");
         yield return createNewMessageFromYou("Simmm temos mesmo");
         yield return createNewMessageFromYou("Aproveitar suas férias");
@@ -770,7 +771,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat48");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("O sorvete do Edilson ta melhor que nunca", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("O sorvete do Edilson ta melhor que nunca", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Temos que sair de novo");
         yield return createNewMessageFromYou("Simmm temos mesmo");
         yield return createNewMessageFromYou("Aproveitar suas férias");
@@ -790,7 +791,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat52");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Deve ter ficado sim kkkkkkk", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Deve ter ficado sim kkkkkkk", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Mas e vc disse oq pra ele");
         yield return createNewMessageFromYou("Falei que era um amigo de infância");
         yield return createNewMessageFromYou("Mas ele é meio ciumento mesmo, fica tranquilo");
@@ -808,7 +809,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat53");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Minha nossa!", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Minha nossa!", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Mas e vc disse oq pra ele");
         yield return createNewMessageFromYou("Falei que era um amigo de infância");
         yield return createNewMessageFromYou("Mas ele é meio ciumento mesmo, fica tranquilo");
@@ -826,7 +827,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat54");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Espero que ele nao me cace kkkkkkk", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Espero que ele nao me cace kkkkkkk", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Mas e vc disse oq pra ele");
         yield return createNewMessageFromYou("Falei que era um amigo de infância");
         yield return createNewMessageFromYou("Mas ele é meio ciumento mesmo, fica tranquilo");
@@ -844,7 +845,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat55");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Entendi", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Entendi", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Se for de boas bora fazer algo domingo então?");
         yield return createNewMessageFromYou("Podemos sim");
         yield return createNewMessageFromMe("Oq acha de tomarmos aquele Têres aqui em casa?");
@@ -872,7 +873,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat56");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Capaz kkk", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Capaz kkk", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Se for de boas bora fazer algo domingo então?");
         yield return createNewMessageFromYou("Podemos sim");
         yield return createNewMessageFromMe("Oq acha de tomarmos aquele Têres aqui em casa?");
@@ -900,7 +901,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat57");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Ah tranquilo", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Ah tranquilo", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Se for de boas bora fazer algo domingo então?");
         yield return createNewMessageFromYou("Podemos sim");
         yield return createNewMessageFromMe("Oq acha de tomarmos aquele Têres aqui em casa?");
@@ -928,7 +929,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha61");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Vou ir também", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Vou ir também", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Boa noite");
 
         textoFadeImage.text = "Hoje foi um dia bom";
@@ -943,7 +944,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha62");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Até", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Até", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Boa noite");
 
         textoFadeImage.text = "Hoje foi um dia bom";
@@ -958,7 +959,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha63");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Se falemo", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Se falemo", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Boa noite");
 
         textoFadeImage.text = "Hoje foi um dia bom";
@@ -1031,7 +1032,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha67");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("pode sim", false, 0.000000001f,   1.4f); // NÃO APAGA
+        yield return createNewMessageFromMe("pode sim", false, 0.000000001f,   1.8f); // NÃO APAGA
         yield return createNewMessageFromMe("16:00 então?"); // reescreve com esse texto
         yield return createNewMessageFromYou("Acho que esse horário fica massa");
         yield return createNewMessageFromYou("Lá pelas 16:00 chego ai então", true);
@@ -1205,7 +1206,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha75");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Tranquilo", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Tranquilo", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Mas e vc ta td bem?");
 
         setButtonOptionsAndShow(
@@ -1220,13 +1221,13 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha76");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Simm, to tentando aproveitar os últimos dias de férias kkkkk", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Simm, to tentando aproveitar os últimos dias de férias kkkkk", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("E vc?");
-        yield return createNewMessageFromYou("To bem também");
+        yield return createNewMessageFromYou("To bem também", false, 1.8f,   3.2f);
 
         novoDia = "Qui 19:50";
         animationEnabled = true;
-        textoFadeImage.text = "Será que ele ta com ciúmes?                         Será que aconteceu alguma coisa?";
+        textoFadeImage.text = "Será que aconteceu alguma coisa?";
         diaFadeImage.text = "Qui 19:50";
         posTransicao = "chat87";
     }
@@ -1236,13 +1237,13 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha77");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("To bem sim", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("To bem sim", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("E vc?");
-        yield return createNewMessageFromYou("To bem também");
+        yield return createNewMessageFromYou("To bem também", false, 1.8f,   3.2f);
 
         novoDia = "Qui 19:50";
         animationEnabled = true;
-        textoFadeImage.text = "Será que ele ta com ciúmes?                      Será que aconteceu alguma coisa?";
+        textoFadeImage.text = "Será que aconteceu alguma coisa?";
         diaFadeImage.text = "Qui 19:50";
         posTransicao = "chat87";
     }
@@ -1252,7 +1253,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha78");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("To mas fiquei meio preocupado contigo", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("To mas fiquei meio preocupado contigo", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Só tava ocupada");
         yield return createNewMessageFromYou("O José tava aqui");
 
@@ -1268,7 +1269,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha79");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Aconteceu alguma coisa?", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Aconteceu alguma coisa?", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Nada não");
         yield return createNewMessageFromYou("Só tava ocupada");
         yield return createNewMessageFromYou("O josé tava aqui");
@@ -1286,7 +1287,7 @@ public class GameManager : MonoBehaviour
         ButtonPanel.SetActive(false);
 
         messagePreDelay = 2.0f;
-        yield return createNewMessageFromMe("Ah, é que eu fiquei meio preocupado", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Ah, é que eu fiquei meio preocupado", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Não tem pq se preocupar comigo");
 
         setButtonOptionsAndShow(
@@ -1302,7 +1303,7 @@ public class GameManager : MonoBehaviour
         ButtonPanel.SetActive(false);
 
         yield return createNewMessageFromMe("Ok");
-        yield return createNewMessageFromYou("Relaxa, ta td certo", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromYou("Relaxa, ta td certo", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Só tava ocupada");
         yield return createNewMessageFromYou("O José tava aqui");
 
@@ -1318,7 +1319,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha82");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Tem certeza?", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Tem certeza?", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Relaxa, ta td certo");
         yield return createNewMessageFromYou("Só tava ocupada");
         yield return createNewMessageFromYou("O José tava aqui");
@@ -1335,7 +1336,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha83");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Tem sim ué, a gente é amigo", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Tem sim ué, a gente é amigo", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Relaxa, ta td certo");
         yield return createNewMessageFromYou("Só tava ocupada");
         yield return createNewMessageFromYou("O José tava aqui");
@@ -1352,11 +1353,11 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha84");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Entendi", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Entendi", false, 0.000000001f,   3.2f);
 
         novoDia = "Qui 19:50";
         animationEnabled = true;
-        textoFadeImage.text = "Será que ele ta com ciúmes?                             Será que aconteceu alguma coisa?";
+        textoFadeImage.text = "Será que aconteceu alguma coisa?";
         diaFadeImage.text = "Qui 19:50";
         posTransicao = "chat87";
     }
@@ -1366,14 +1367,14 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha85");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Se aconteceu algo pode me contar", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Se aconteceu algo pode me contar", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Pode deixar");
         yield return createNewMessageFromYou("Mas ta td bem, sério");
         yield return createNewMessageFromMe("Ta né");
 
         novoDia = "Qui 19:50";
         animationEnabled = true;
-        textoFadeImage.text = "Será que ele ta com ciúmes?                               Será que aconteceu alguma coisa?";
+        textoFadeImage.text = "Será que aconteceu alguma coisa?";
         diaFadeImage.text = "Qui 19:50";
         posTransicao = "chat87";
     }
@@ -1383,7 +1384,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha86");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Ele fez alguma coisa?", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Ele fez alguma coisa?", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("???");
         yield return createNewMessageFromYou("Pq vc acha isso?");
         yield return createNewMessageFromMe("Você falou dele ser abusivo as vezes",true);
@@ -1393,7 +1394,7 @@ public class GameManager : MonoBehaviour
 
         novoDia = "Qui 19:50";
         animationEnabled = true;
-        textoFadeImage.text = "Será que ele ta com ciúmes?                            Será que aconteceu alguma coisa?";
+        textoFadeImage.text = "Será que aconteceu alguma coisa?";
         diaFadeImage.text = "Qui 19:50";
         posTransicao = "chat87";
     }
@@ -1420,7 +1421,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha88");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Como estão as coisas?", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Como estão as coisas?", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Oi");
         yield return createNewMessageFromYou("Tranquilo");
         yield return createNewMessageFromMe("Semana que vem to indo embora ja");
@@ -1441,7 +1442,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha89");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Eai de boas?", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Eai de boas?", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Oi");
         yield return createNewMessageFromYou("Tranquilo");
         yield return createNewMessageFromMe("Semana que vem to indo embora ja");
@@ -1462,7 +1463,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha90");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Tudo certo?", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Tudo certo?", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Oi");
         yield return createNewMessageFromYou("Tudo sim");
         yield return createNewMessageFromMe("Semana que vem to indo embora ja");
@@ -1483,13 +1484,13 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha91");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Ok", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Ok", false, 0.000000001f,   1.8f);
 
-        novoDia = "Qua 09:16";
-        animationEnabled = true;
-        textoFadeImage.text = "Tenho certeza que o josé ta privando ela";
-        diaFadeImage.text = "Duas semanas depois";
-        posTransicao = "chat106";
+        setButtonOptionsAndShow(
+     "Tudo bem", () => StartCoroutine(chat94()),
+     "Pq?", () => StartCoroutine(chat95()),
+     "Tem alguma coisa a ver com o José?", () => StartCoroutine(chat96())
+     );
     }
 
     public IEnumerator chat92()
@@ -1497,7 +1498,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha92");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("E sábado?", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("E sábado?", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Também não");
         yield return createNewMessageFromYou("Esse fim de semana não da");
 
@@ -1513,7 +1514,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha93");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Tudo bem, podemos ver outro dia então", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Tudo bem, podemos ver outro dia então", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Sim vamos vendo");
         yield return createNewMessageFromYou("Mas não sei se vou poder");
 
@@ -1529,13 +1530,18 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha94");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Tudo bem", false, 0.000000001f,   1.4f);
-
-        novoDia = "Qua 09:16";
-        animationEnabled = true;
-        textoFadeImage.text = "Tenho certeza que o josé ta privando ela";
-        diaFadeImage.text = "Duas semanas depois";
-        posTransicao = "chat106";
+        yield return createNewMessageFromMe("Tudo bem", false, 0.000000001f,   1.8f);
+        yield return createNewMessageFromYou("Tô ocupada com uns trabalhos da facul");
+        yield return createNewMessageFromYou("Desculpa mesmo");
+        yield return createNewMessageFromYou("Queria muito poder ir");
+        yield return createNewMessageFromMe("Você ta diferente");
+        yield return createNewMessageFromYou("To?");
+        
+        setButtonOptionsAndShow(
+     "Do nada tu ficou seca", () => StartCoroutine(chat97()),
+     "Sei lá vc ta estranha", () => StartCoroutine(chat98()),
+     "Tenho certeza que é seu namorado", () => StartCoroutine(chat99())
+     );
     }
 
     public IEnumerator chat95()
@@ -1543,7 +1549,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha95");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Pq?", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Pq?", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Tô ocupada com uns trabalhos da facul");
         yield return createNewMessageFromYou("Desculpa mesmo");
         yield return createNewMessageFromYou("Queria muito poder ir");
@@ -1562,7 +1568,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha96");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Tem lguma coisa a ver com o josé?", true, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Tem lguma coisa a ver com o josé?", true, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Pq?");
         yield return createNewMessageFromYou("Tô ocupada com uns trabalhos da facul");
         yield return createNewMessageFromYou("Desculpa mesmo");
@@ -1582,7 +1588,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha97");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Do nada tu ficou seca", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Do nada tu ficou seca", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Olha");
         yield return createNewMessageFromYou("Não sei oq vc ta pensando");
         yield return createNewMessageFromYou("Mas eu só to cansada");
@@ -1599,7 +1605,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha98");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Sei la vc ta estranha", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Sei la vc ta estranha", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Olha");
         yield return createNewMessageFromYou("Não sei oq vc ta pensando");
         yield return createNewMessageFromYou("Mas eu só to cansada");
@@ -1616,7 +1622,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha99");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Tenho certeza que teu namorado ta te controlando", true, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Tenho certeza que teu namorado ta te controlando", true, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Sei la vc ta estranha");
         yield return createNewMessageFromYou("Olha");
         yield return createNewMessageFromYou("Não sei oq vc ta pensando");
@@ -1634,9 +1640,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha100");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Se tu diz...", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Se tu diz...", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Mas eu não acredito");
-        yield return createNewMessageFromYou("Mesmo se tiver algo errado vc não tem pq se meter");
+        yield return createNewMessageFromYou("Mesmo se tiver algo errado vc não tem pq se meter", false, 3.5f,   1.8f);
         yield return createNewMessageFromYou("Não quero causar confusão com isso");
 
         setButtonOptionsAndShow(
@@ -1651,7 +1657,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha101");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Olha, eu sei que tem algo errado", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Olha, eu sei que tem algo errado", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("E se tiver??");
         yield return createNewMessageFromYou("Vc não tem pq se meter");
         yield return createNewMessageFromYou("Não quero causar confusão com isso");
@@ -1668,7 +1674,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha102");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Olha eu quero muito poder te ajudar", true, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Olha eu quero muito poder te ajudar", true, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Olha, eu sei que tem algo errado");
         yield return createNewMessageFromYou("E se tiver??");
         yield return createNewMessageFromYou("Vc não tem pq se meter");
@@ -1685,7 +1691,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha103");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Me deixa falar com o José", true, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Me deixa falar com o José", true, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Eu não to me metendo por me meter");
         yield return createNewMessageFromMe("Mas claramente vc ta assim por causa dele");
         yield return createNewMessageFromYou("É melhor pararmos de conversar");
@@ -1708,7 +1714,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha104");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Eu não to me metendo por me meter", false, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Eu não to me metendo por me meter", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Mas claramente vc ta assim por causa dele");
         yield return createNewMessageFromYou("É melhor pararmos de conversar");
         yield return createNewMessageFromYou("Vai ser melhor assim");
@@ -1730,7 +1736,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cha105");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Isso é ridiculo", true, 0.000000001f,   1.4f);
+        yield return createNewMessageFromMe("Isso é ridiculo", true, 0.000000001f,   1.8f);
         yield return createNewMessageFromMe("Eu não to me metendo por me meter");
         yield return createNewMessageFromMe("Mas claramente vc ta assim por causa dele");
         yield return createNewMessageFromYou("É melhor pararmos de conversar");
@@ -1761,7 +1767,7 @@ public class GameManager : MonoBehaviour
 
         messagePreDelay = 0.000001f;
         yield return createNewMessageFromYou("Filho");
-        messagePreDelay = 2.0f;
+        messagePreDelay = 2.2f;
         yield return createNewMessageFromMe("Oi mãe");
         yield return createNewMessageFromYou("Preciso te mostrar essa notícia");
         yield return createNewNoticiaFromYou();
@@ -1924,12 +1930,15 @@ public class GameManager : MonoBehaviour
         if(posTransicao == "chat36")
         {
             notificacaoDia2.gameObject.SetActive(false);
+            textoBotaoTransicao.gameObject.SetActive(false);
             StartCoroutine(chat36());
         } else if(posTransicao == "chat74"){
             notificacaoDia5.gameObject.SetActive(false);
+            textoBotaoTransicao.gameObject.SetActive(false);
             StartCoroutine(chat74());
         }else if(posTransicao == "chat106"){
             notificacaoDia7.gameObject.SetActive(false);
+            textoBotaoTransicao.gameObject.SetActive(false);
             DestroiChatMessagesAll();
             StartCoroutine(chat106());
         }
@@ -2047,6 +2056,7 @@ public class GameManager : MonoBehaviour
                     fadeImageObject.SetActive(false);
                     if(posTransicao == "chat36"){
                         botaoTransicao.gameObject.SetActive(true);
+                        textoBotaoTransicao.gameObject.SetActive(true);
                     } else if( posTransicao == "chat465"){
                         botaoTransicao2.gameObject.SetActive(true);
                         textoBotaoTransicao2.gameObject.SetActive(true);
@@ -2061,11 +2071,13 @@ public class GameManager : MonoBehaviour
                         textoBotaoTransicao2.gameObject.SetActive(true);
                     } else if( posTransicao == "chat74"){
                         botaoTransicao.gameObject.SetActive(true);
+                        textoBotaoTransicao.gameObject.SetActive(true);
                     }else if(posTransicao == "chat87"){
                         botaoTransicao2.gameObject.SetActive(true);
                         textoBotaoTransicao2.gameObject.SetActive(true);
                     } else if(posTransicao == "chat106"){
                         botaoTransicao.gameObject.SetActive(true);
+                        textoBotaoTransicao.gameObject.SetActive(true);
                     }
                     
                     ConfigureButtonTransition();
