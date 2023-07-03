@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     private float messagePreDelay = 1.0f; // Tempo de atraso entre as mensagens
     private float messagePosDelay = 1.0f; // Tempo de atraso entre as mensagens
 
-    public TMP_Text statusMaria;
+    public TMP_Text statusContato;
     public Image cabecalho;
     public Image botoesFundo;
     public Image fotoMaria;
@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
         novoDia = "Qua 22:40";
         dia.text = novoDia;
         
-        StartCoroutine(chat87());
+        StartCoroutine(chat1());
     }
 
     void Update()
@@ -303,7 +303,7 @@ public class GameManager : MonoBehaviour
         yield return createNewMessageFromYou("No momento estou desempregada");
 
         setButtonOptionsAndShow(
-        "Poxa, Lembro que vc gosta de lá", () => StartCoroutine(chat19()),
+        "Poxa, Lembro que vc gostava de lá", () => StartCoroutine(chat19()),
         "Você vai achar algo melhor", () => StartCoroutine(chat20()),
         "DESATIVADO", () => StartCoroutine(chat20())
         );
@@ -317,7 +317,7 @@ public class GameManager : MonoBehaviour
         yield return createNewMessageFromMe("E a tia Rose? como ela esta?", false, 0.000000001f,   1.8f);
         yield return createNewMessageFromYou("Ela ta bemm");
         yield return createNewMessageFromYou("Ta com saudades de tomar um tererê contigo🥺");
-        yield return createNewMessageFromMe("Nossa vdd, saudades de uma tarde com um têres com vcs");
+        yield return createNewMessageFromMe("Nossa vdd, saudades de uma tarde de têres com vcs");
         yield return createNewMessageFromYou("Mas e a tia Nete tá bem também?");
         yield return createNewMessageFromYou("Vi ela no restaurante lá semana passada");
         yield return createNewMessageFromMe("Ela ta bem também");
@@ -538,7 +538,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Chat32");
         ButtonPanel.SetActive(false);
 
-        yield return createNewMessageFromMe("Vamos sim, boa noite", false, 0.000000001f,   1.8f);
+        yield return createNewMessageFromMe("Vamos sim", false, 0.000000001f,   1.8f);
 
         setButtonOptionsAndShow(
        "Nos vemos na sexta", () => StartCoroutine(chat33()),
@@ -1035,7 +1035,7 @@ public class GameManager : MonoBehaviour
         yield return createNewMessageFromMe("pode sim", false, 0.000000001f,   1.8f); // NÃO APAGA
         yield return createNewMessageFromMe("16:00 então?"); // reescreve com esse texto
         yield return createNewMessageFromYou("Acho que esse horário fica massa");
-        yield return createNewMessageFromYou("Lá pelas 16:00 chego ai então", true);
+        yield return createNewMessageFromYou("Lá pelas 16:00 chego ai então");
         yield return createNewMessageFromYou("Fica esperto ein😠");
         yield return createNewMessageFromMe("Feshoww");
 
@@ -1051,6 +1051,7 @@ public class GameManager : MonoBehaviour
         //Domingo 22:15
         Debug.Log("Cha685");
         ButtonPanel.SetActive(false);
+        statusContato.text = "Offline";
 
         yield return createNewMessageFromMe("Eai");
 
@@ -1188,6 +1189,7 @@ public class GameManager : MonoBehaviour
         botoesFundo.GetComponent<Image>().color = new Color32(140,115,115,255);
         fotoMaria.gameObject.SetActive(false);
         fotoMaria2.gameObject.SetActive(true);
+        statusContato.text = "Online";
 
         messagePreDelay= 0.00000001f;
         yield return createNewMessageFromYou("Oi");
